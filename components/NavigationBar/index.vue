@@ -7,6 +7,7 @@
             <NuxtLink to="/">Go to index</NuxtLink>
             <NuxtLink to="/food">Go to food</NuxtLink>
             <NuxtLink to="/scanner">Go to Scanner</NuxtLink>
+            <NuxtLink to="/game">Go to Game</NuxtLink>
         </div>
     </nav>
 </template>
