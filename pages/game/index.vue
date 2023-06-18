@@ -2,10 +2,10 @@
     <h2>현재숫자: {{ currentNumber }}</h2>
     <button @click="initGame">게임초기화</button>
     <div>
-        <input type="number" v-model="numberListSize" class="input"><button @click="setNumberListLength()">숫자크기 변경</button>
+        <input type="number" v-model="numberListSize" class="input"><button @click="setNumberListLength()">최대값 변경</button>
     </div>
     <button @click="shuffle(numberList)" class="btn">숫자배열 섞기</button>
-    <h1>1부터 100까지 눌러주세요.</h1>
+    <h1>숫자를 순서대로 눌러주세요.</h1>
     <h1 :class="currentColor.color">버튼색깔 {{ currentColor.colorName }}</h1>
     <div class="grid grid-cols-10 p-2 gap-2">
         <div v-for="(item, i) in numberBtnColorList" :key="i" class="bg-gray-200 p-2 text-center">
@@ -31,7 +31,7 @@ import { ref, onMounted, watch } from 'vue'
 
 
 const currentNumber = ref(0);
-const numberListSize = ref(100);
+const numberListSize = ref(10);
 const numberList = ref([]);
 const currentColor = ref({ colorName: '빨강', color: 'bg-red-200' });
 
